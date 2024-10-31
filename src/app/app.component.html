@@ -226,9 +226,36 @@
         </defs>
       </svg>
       <h1>Hello, {{ title }}</h1>
+
+      <p-table [value]="sagas" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>ID</th>
+            <th>Titulos</th>
+            <th>Numero de saga</th>
+            <th>Capitulos</th>
+            <th>Volumenes</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-saga>
+          <tr>
+            <td>{{ saga.id }}</td>
+            <td>{{ saga.title }}</td>
+            <td>{{ saga.saga_number }}</td>
+            <td>{{ saga.saga_chapitre }}</td>
+            <td>{{ saga.saga_volume }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+      <!-- <div *ngFor="let saga of sagas">
+        <p>{{saga.title}}</p>
+      </div> -->
       <p>Congratulations! Your app is running. 🎉</p>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
+    <div>
+      <button pButton label="Guardar" class="submit-btn" (click)="send()"></button>
+    </div>
     <div class="right-side">
       <div class="pill-group">
         @for (item of [
