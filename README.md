@@ -1,7 +1,11 @@
 # one-piece-front
 Is a internal practic project for udigital developers trainees
-
+----------------------------------------------
+We have to consume an open source api
 API: https://api-onepiece.com/en/documentation
+----------------------------------------------
+We use primeng components to UI
+PrimeNG: https://primeng.org/installation
 
 # OnePieceFront
 
